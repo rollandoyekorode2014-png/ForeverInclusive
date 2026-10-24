@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your dashboard – booking summary, ratings and reviews at Forever Inclusive Academic Tutoring." />
+  <title>Dashboard | Forever Inclusive Academic Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="48" height="48" />
+      <span>Forever Inclusive</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#rates">Rates</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-sm" id="nav-auth-btn">Sign Up / Log In</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm" id="nav-dash-btn" style="display:none">Dashboard</a>
+      <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn" style="display:none">Log out</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#rates">Rates</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="signup.html" id="mobile-auth">Sign Up / Log In</a>
+    <a href="dashboard.html" id="mobile-dash" style="display:none">Dashboard</a>
+    <a href="#" id="mobile-logout" style="display:none">Log out</a>
+  </div>
+</header>
+
+<main class="form-page">
+  <div class="container">
+    <div class="dashboard-header reveal">
+      <div>
+        <h1 id="welcome-msg">Welcome!</h1>
+        <p style="margin:0;color:#5a3a42">Your booking summary and reviews</p>
+      </div>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+        <a href="choose.html" class="btn btn-primary btn-sm">New Booking</a>
+        <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn-dash">Log out</a>
+      </div>
+    </div>
+
+    <!-- Booking Summary -->
+    <section class="booking-summary reveal" id="booking-summary">
+      <h3>Booking Summary</h3>
+      <div id="summary-content">
+        <p>Loading…</p>
+      </div>
+    </section>
+
+    <!-- Ratings & Reviews -->
+    <section class="reveal">
+      <div class="section-header" style="margin-bottom:1.5rem">
+        <h2>Ratings & Reviews</h2>
+        <p>Share your experience or read what other parents say.</p>
+      </div>
+
+      <div class="ratings-preview" style="margin-bottom:2rem">
+        <div class="rating-summary">
+          <div class="rating-score" id="avg-rating">5.0</div>
+          <div class="stars" id="summary-stars" data-animate>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p><span id="review-count">4</span> reviews</p>
+        </div>
+
+        <!-- Leave a review -->
+        <div class="card" style="padding:1.5rem">
+          <h3 style="margin-bottom:0.75rem">Leave a review</h3>
+          <form id="review-form">
+            <div class="star-input" role="group" aria-label="Star rating">
+              <button type="button" aria-label="1 star">★</button>
+              <button type="button" aria-label="2 stars">★</button>
+              <button type="button" aria-label="3 stars">★</button>
+              <button type="button" aria-label="4 stars">★</button>
+              <button type="button" aria-label="5 stars">★</button>
+            </div>
+            <div class="form-group">
+              <label for="review-comment">Your comment</label>
+              <textarea id="review-comment" rows="3" required placeholder="How was your experience?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Submit Review</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="reviews-list" class="review-cards">
+        <!-- Populated by JS. Sample reviews are seeded for demo and labelled. -->
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="56" height="56" />
+        <strong>Forever Inclusive Academic Tutoring</strong>
+        <p>Home tutoring Y1–Y12 across Qatar. Inclusive, professional, and always mobile.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="choose.html">Book Now</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+97459978518">+974 5997 8518</a></li>
+          <li><a href="https://wa.me/97459978518" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Forever Inclusive Academic Tutoring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/97459978518" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+<script>
+  // Extra logout handler for dashboard header button
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('nav-logout-btn-dash');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        localStorage.removeItem('currentUser');
+        window.location.href = 'index.html';
+      });
+    }
+  });
+</script>
+</body>
+</html>

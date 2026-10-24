@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forever Inclusive Academic Tutoring – Home tutoring for Y1–Y12 in Qatar. English, Maths, Science, Exam Prep. Cambridge, CBCS, American curricula. Mobile tutors." />
+  <title>Forever Inclusive Academic Tutoring | Home Tutoring Qatar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<!-- ========== NAVBAR ========== -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="48" height="48" />
+      <span>Forever Inclusive</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#rates">Rates</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-sm" id="nav-auth-btn">Sign Up / Log In</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm" id="nav-dash-btn" style="display:none">Dashboard</a>
+      <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn" style="display:none">Log out</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="#services">Services</a>
+    <a href="#rates">Rates</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="signup.html" id="mobile-auth">Sign Up / Log In</a>
+    <a href="dashboard.html" id="mobile-dash" style="display:none">Dashboard</a>
+    <a href="#" id="mobile-logout" style="display:none">Log out</a>
+  </div>
+</header>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Forever Inclusive Academic Tutoring</h1>
+        <p class="subtitle">Home Tutoring Y1–Y12</p>
+        <p>Personalised, inclusive home tutoring across Qatar. We come to you — supporting every learner with patience, expertise and care.</p>
+        <div class="hero-cta">
+          <a href="choose.html" class="btn btn-primary">Get Started</a>
+          <a href="tel:+97477873135" class="btn btn-outline">Call Now</a>
+          <a href="https://wa.me/97477873135" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-logo-wrap">
+        <img src="src/assets/2.png" alt="Forever Inclusive logo – hands holding a book with Doha skyline" class="hero-logo float" width="320" height="320" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <div class="container">
+    <div class="counters reveal">
+      <div class="counter-item">
+        <div class="num" data-target="Y1–Y12">Y1–Y12</div>
+        <div class="label">Year Groups</div>
+      </div>
+      <div class="counter-item">
+        <div class="num" data-target="3">3</div>
+        <div class="label">Curricula</div>
+      </div>
+      <div class="counter-item">
+        <div class="num" data-target="100%">100%</div>
+        <div class="label">Mobile Tutors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Services</h2>
+        <p>Expert home tutoring tailored to your child’s needs and curriculum.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card reveal reveal-delay-1">
+          <span class="card-icon" aria-hidden="true">📖</span>
+          <h3>English / Early Literacy</h3>
+          <p>Reading, writing and speaking support for confident communicators.</p>
+        </article>
+        <article class="card reveal reveal-delay-2">
+          <span class="card-icon" aria-hidden="true">🔢</span>
+          <h3>Maths</h3>
+          <p>Clear explanations and practice that build real understanding and confidence.</p>
+        </article>
+        <article class="card reveal reveal-delay-3">
+          <span class="card-icon" aria-hidden="true">🔬</span>
+          <h3>Science</h3>
+          <p>Engaging lessons that make concepts stick — from primary to secondary.</p>
+        </article>
+        <article class="card reveal reveal-delay-1">
+          <span class="card-icon" aria-hidden="true">📝</span>
+          <h3>Exam Preparation</h3>
+          <p>Focused revision and exam techniques for strong results.</p>
+        </article>
+        <article class="card reveal reveal-delay-2">
+          <span class="card-icon" aria-hidden="true">🎓</span>
+          <h3>Curriculum Support</h3>
+          <p>Cambridge, CBCS and American curricula covered with care.</p>
+        </article>
+        <article class="card reveal reveal-delay-3">
+          <span class="card-icon" aria-hidden="true">✅</span>
+          <h3>IGCSE Exam Preparation</h3>
+          <p>All subjects — structured preparation for IGCSE success.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RATES ========== -->
+  <section id="rates">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Transparent Rates</h2>
+        <p>Simple hourly rates based on your area. We are fully mobile.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="card price-card reveal reveal-delay-1">
+          <h3>Al Wakra / Al Wukair / Ezdan</h3>
+          <div class="price">120 <span>QAR/hr</span></div>
+          <p class="areas">Convenient rates for nearby areas</p>
+        </article>
+        <article class="card price-card reveal reveal-delay-2">
+          <h3>Doha Areas</h3>
+          <div class="price">150 <span>QAR/hr</span></div>
+          <p class="areas">West Bay, The Pearl, Lusail, Al Sadd & more</p>
+        </article>
+        <article class="card price-card reveal reveal-delay-3">
+          <h3>Al Khor / Al Sakhama & beyond</h3>
+          <div class="price">200 <span>QAR/hr</span></div>
+          <p class="areas">Extended reach across Qatar</p>
+        </article>
+      </div>
+      <p class="reveal" style="text-align:center;margin-top:1.75rem;font-weight:500">
+        🚘 We are mobile. We come to you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>How It Works</h2>
+        <p>Four simple steps to start your child’s learning journey.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal reveal-delay-1">
+          <div class="step-num">1</div>
+          <h3>Choose Learning Path</h3>
+          <p>Select Standard or Autism-Friendly Learning.</p>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-num">2</div>
+          <h3>Sign Up</h3>
+          <p>Create a free account in under a minute.</p>
+        </div>
+        <div class="step reveal reveal-delay-3">
+          <div class="step-num">3</div>
+          <h3>Tell Us About Your Child</h3>
+          <p>Share details so we can match the right support.</p>
+        </div>
+        <div class="step reveal reveal-delay-4">
+          <div class="step-num">4</div>
+          <h3>Book & Confirm</h3>
+          <p>Confirm via WhatsApp and we come to you.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem" class="reveal">
+        <a href="choose.html" class="btn btn-primary">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RATINGS PREVIEW ========== -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Parents Say</h2>
+        <p>Trusted by families across Qatar.</p>
+      </div>
+      <div class="ratings-preview">
+        <div class="rating-summary reveal">
+          <div class="rating-score">5.0</div>
+          <div class="stars" data-animate>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p>Based on parent feedback</p>
+          <a href="dashboard.html" class="btn btn-outline btn-sm" style="margin-top:0.75rem">See all reviews</a>
+        </div>
+        <div class="review-cards">
+          <article class="review-card reveal reveal-delay-1">
+            <div class="reviewer">Sara M.</div>
+            <div class="review-stars">★★★★★</div>
+            <p>Wonderful tutor! My daughter looks forward to every session. Patient, kind and very professional.</p>
+          </article>
+          <article class="review-card reveal reveal-delay-2">
+            <div class="reviewer">Ahmed K.</div>
+            <div class="review-stars">★★★★★</div>
+            <p>Excellent support for our son. The autism-friendly approach made a real difference. Highly recommend.</p>
+          </article>
+          <article class="review-card reveal reveal-delay-3">
+            <div class="reviewer">Fatima R.</div>
+            <div class="review-stars">★★★★★</div>
+            <p>Flexible schedule and comes to our home in Al Wakra. Maths grades improved within weeks!</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <div class="contact-box reveal">
+        <h2>Ready to get started?</h2>
+        <p>Reply or call to book your session today.</p>
+        <div class="phone">
+          <a href="tel:+974 77873135">+974 7787 3135</a>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:+97459978518" class="btn btn-primary">Call Now</a>
+          <a href="https://wa.me/97459978518" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a href="choose.html" class="btn btn-outline">Book Online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="56" height="56" />
+        <strong>Forever Inclusive Academic Tutoring</strong>
+        <p>Home tutoring Y1–Y12 across Qatar. Inclusive, professional, and always mobile.</p>
+        <p>We are a Tutorial Company with years of experience. We assign professional Teachers to students for home tutoring. We guide/support students for ClassDojo Tasks/projects.
+          Distance is not a problem. We are mobile.
+
+          Talk to is about your preferred teacher, gender and nationality and we will deploy one to your home.
+
+          Our services include:
+          1. English
+          2. Math
+          3. Science
+          4. ClassDojo Tasks/projects
+          5. IGCSE
+          6. IELTS
+          7. Exam preparation
+          Curriculum: CBCE, Cambridge and America.
+
+          We also offer academic support for children with Autism, ADHD, Down Syndrome and Learning Disabilities
+
+          Grade: Y1 to Y12
+
+          We cover all areas in Qatar!
+
+          Book your sessions now!</p>
+
+        message us now!. Gmail:foreverinclusiveacademictutor@gmail.com
+
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#rates">Rates</a></li>
+          <li><a href="choose.html">Book Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="foreverinclusiveacademictutor@gmail.com come text us" </a></li>
+          <li><a href="tel:">+974 77873135</a></li>
+          <li><a href="https://wa.me/77873135" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Qatar – We come to you</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Forever Inclusive Academic Tutoring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/+97477873135" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
