@@ -1,0 +1,122 @@
+/* ========== animations.css ========== */
+/* All keyframes, transitions & motion classes live here.
+   JS only toggles classes. Animate only transform & opacity. */
+
+:root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Fade + slide up ---------- */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.7s var(--ease) forwards;
+}
+.anim-fade-up.delay-1 { animation-delay: 0.12s; }
+.anim-fade-up.delay-2 { animation-delay: 0.24s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Scroll reveal (toggled by IntersectionObserver) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children */
+.reveal:nth-child(1) { transition-delay: 0.05s; }
+.reveal:nth-child(2) { transition-delay: 0.12s; }
+.reveal:nth-child(3) { transition-delay: 0.19s; }
+.reveal:nth-child(4) { transition-delay: 0.26s; }
+.reveal:nth-child(5) { transition-delay: 0.33s; }
+
+/* ---------- Hero floating shapes ---------- */
+.shape {
+  animation: float 8s ease-in-out infinite;
+}
+.shape-1 { animation-duration: 9s; }
+.shape-2 { animation-duration: 7s; animation-delay: -2s; }
+.shape-3 { animation-duration: 11s; animation-delay: -4s; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(12px, -18px); }
+  66% { transform: translate(-10px, 10px); }
+}
+
+/* ---------- Track card selection transition ---------- */
+.track-card.selecting {
+  transform: scale(1.04);
+  opacity: 0.85;
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+}
+
+/* ---------- Shake on invalid ---------- */
+.shake {
+  animation: shake 0.45s var(--ease);
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+/* ---------- Pulsing Book / CTA button ---------- */
+.btn-pulse {
+  animation: pulse 2.4s var(--ease) infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(128, 0, 32, 0); }
+}
+
+/* ---------- Success icon pop ---------- */
+.success-panel:not(.hidden) .success-icon {
+  animation: successPop 0.6s var(--ease) forwards;
+}
+@keyframes successPop {
+  0% { transform: scale(0.4); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- Driving car ---------- */
+.car-svg {
+  animation: drive 7s linear infinite;
+}
+@keyframes drive {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + 60px)); }
+}
+
+/* SEN calm mode: slower, gentler */
+.sen-mode .reveal {
+  transition-duration: 0.9s;
+}
+.sen-mode .btn-pulse {
+  animation-duration: 3.5s;
+}
+.sen-mode .car-svg {
+  animation-duration: 12s;
+}
+.sen-mode .shape {
+  animation-duration: 14s;
+}

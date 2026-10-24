@@ -1,0 +1,113 @@
+.root {
+    -fx-background-color: #1a1a1a;
+    -fx-font-family: "Segoe UI", system-ui, sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #e0e0e0;
+}
+
+.top-bar {
+    -fx-background-color: #252525;
+    -fx-padding: 8 12;
+    -fx-border-color: #333;
+    -fx-border-width: 0 0 1 0;
+}
+
+.button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #e0e0e0;
+    -fx-background-radius: 4;
+    -fx-padding: 6 14;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #4a4a4a;
+}
+.button:pressed {
+    -fx-background-color: #2a2a2a;
+}
+.button.primary {
+    -fx-background-color: #0078d4;
+}
+.button.primary:hover {
+    -fx-background-color: #1a86e0;
+}
+
+.panel {
+    -fx-background-color: #222;
+    -fx-border-color: #333;
+    -fx-border-width: 0 1 0 0;
+}
+
+.library-item {
+    -fx-background-color: #2a2a2a;
+    -fx-padding: 8;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+.library-item:hover {
+    -fx-background-color: #333;
+}
+.library-item.selected {
+    -fx-background-color: #0078d4;
+}
+
+.preview-area {
+    -fx-background-color: #111;
+}
+
+.timeline {
+    -fx-background-color: #1e1e1e;
+}
+
+.track {
+    -fx-background-color: #252525;
+    -fx-border-color: #333;
+    -fx-border-width: 0 0 1 0;
+}
+
+.clip {
+    -fx-background-color: #3a7ca5;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+.clip.audio {
+    -fx-background-color: #5a8f5a;
+}
+.clip.text {
+    -fx-background-color: #8f6a3a;
+}
+.clip.selected {
+    -fx-border-color: #fff;
+    -fx-border-width: 2;
+}
+
+.playhead {
+    -fx-stroke: #ff4444;
+    -fx-stroke-width: 2;
+}
+
+.slider .track {
+    -fx-background-color: #444;
+}
+.slider .thumb {
+    -fx-background-color: #0078d4;
+}
+
+.label {
+    -fx-text-fill: #ccc;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: #333;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #444;
+    -fx-border-radius: 3;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}

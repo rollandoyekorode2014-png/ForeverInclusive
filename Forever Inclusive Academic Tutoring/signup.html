@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign up or log in to Forever Inclusive Academic Tutoring to book home tutoring sessions in Qatar." />
+  <title>Sign Up / Log In | Forever Inclusive Academic Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="48" height="48" />
+      <span>Forever Inclusive</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#rates">Rates</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-sm" id="nav-auth-btn">Sign Up / Log In</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm" id="nav-dash-btn" style="display:none">Dashboard</a>
+      <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn" style="display:none">Log out</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#rates">Rates</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="signup.html" id="mobile-auth">Sign Up / Log In</a>
+    <a href="dashboard.html" id="mobile-dash" style="display:none">Dashboard</a>
+    <a href="#" id="mobile-logout" style="display:none">Log out</a>
+  </div>
+</header>
+
+<main class="form-page">
+  <div class="container">
+    <div class="form-card page-enter">
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab-btn active" data-tab="panel-signup" role="tab" aria-selected="true">Sign Up</button>
+        <button type="button" class="tab-btn" data-tab="panel-login" role="tab" aria-selected="false">Log In</button>
+      </div>
+
+      <!-- Sign Up Panel -->
+      <div id="panel-signup" class="tab-panel active" role="tabpanel">
+        <h2 style="margin-bottom:1.25rem;text-align:center">Create your account</h2>
+        <form id="signup-form" novalidate>
+          <div class="form-group">
+            <label for="signup-name">Full name</label>
+            <input type="text" id="signup-name" name="name" autocomplete="name" required placeholder="Your full name" />
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="signup-phone">Phone (+974)</label>
+            <input type="tel" id="signup-phone" name="phone" autocomplete="tel" required placeholder="+974 5XXX XXXX" />
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="signup-password" name="password" autocomplete="new-password" required placeholder="At least 6 characters" minlength="6" />
+              <button type="button" class="toggle-pass" aria-label="Show password">Show</button>
+            </div>
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm">Confirm password</label>
+            <div class="password-wrap">
+              <input type="password" id="signup-confirm" name="confirm" autocomplete="new-password" required placeholder="Repeat password" />
+              <button type="button" class="toggle-pass" aria-label="Show password">Show</button>
+            </div>
+            <span class="error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+        <p style="text-align:center;margin-top:1rem;font-size:0.875rem;color:#6a4a52">
+          <!-- DEMO ONLY: Users are stored in localStorage. A real backend is required in production. -->
+          By signing up you agree to be contacted about tutoring sessions.
+        </p>
+      </div>
+
+      <!-- Log In Panel -->
+      <div id="panel-login" class="tab-panel" role="tabpanel">
+        <h2 style="margin-bottom:1.25rem;text-align:center">Welcome back</h2>
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="login-password" name="password" autocomplete="current-password" required placeholder="Your password" />
+              <button type="button" class="toggle-pass" aria-label="Show password">Show</button>
+            </div>
+            <span class="error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding-top:0">
+      <p>&copy; 2026 Forever Inclusive Academic Tutoring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/97459978518" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

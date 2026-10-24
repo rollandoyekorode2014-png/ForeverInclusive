@@ -1,0 +1,208 @@
+<!-- ========== services.html ========== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Rates | Home Tutoring Qatar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+<div class="mobile-cta-bar" aria-label="Quick contact">
+  <a href="tel:+97459978518" class="cta-call">Call</a>
+  <a href="https://wa.me/97459978518" class="cta-wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Home Tutoring Qatar">
+      <svg class="logo-svg" viewBox="0 0 64 80" width="40" height="50" aria-hidden="true">
+        <defs>
+          <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#800020"/>
+            <stop offset="100%" stop-color="#5E0017"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#ribbonGrad)" d="M20 8 L44 8 Q52 8 52 16 L52 28 Q52 36 44 36 L36 36 L36 44 Q36 52 28 52 L20 52 Q12 52 12 44 L12 28 Q12 20 20 20 Z"/>
+        <path fill="#FAF6F6" d="M24 18 h8 v6 h-8z M32 28 h6 v6 h-6z M18 32 h6 v6 h-6z"/>
+        <circle cx="28" cy="22" r="2.5" fill="#FAF6F6"/>
+        <circle cx="38" cy="34" r="2.5" fill="#FAF6F6"/>
+      </svg>
+      <span class="logo-text">Home Tutoring<br><small>Qatar</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="signup.html" class="nav-link">Sign Up</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- User bar -->
+  <div class="user-bar">
+    <div class="container">
+      <p>Signed in as <strong id="user-display-name"></strong>
+        <button type="button" id="logout-btn" class="link-btn">Log out</button>
+      </p>
+      <button type="button" id="switch-track-btn" class="btn btn-outline btn-sm">Switch track</button>
+    </div>
+  </div>
+
+  <!-- STANDARD content -->
+  <section id="standard-content" class="services-section hidden">
+    <div class="container">
+      <h1 class="page-title anim-fade-up">Home Tutoring Y1–Y12</h1>
+      <p class="page-lead anim-fade-up delay-1">High-quality academic support for the standard learner.</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>English / Early Literacy</h3>
+          <p>Reading, writing and speaking skills tailored to your child’s level.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Maths</h3>
+          <p>Concept mastery, problem-solving and exam technique.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Science</h3>
+          <p>Hands-on understanding of key scientific ideas.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Exam Preparation</h3>
+          <p>Targeted revision and past-paper practice.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Curriculum Coverage</h3>
+          <p>Cambridge · CBCS · American · IGCSE (all subjects)</p>
+        </article>
+      </div>
+
+      <h2 class="rates-title reveal">Rates per hour</h2>
+      <div class="rates-grid">
+        <div class="rate-card reveal">
+          <p class="rate-area">Al Wakra / Al Wukair / Ezdan</p>
+          <p class="rate-price"><span class="counter" data-target="120">0</span> QAR/hr</p>
+        </div>
+        <div class="rate-card reveal">
+          <p class="rate-area">Doha areas</p>
+          <p class="rate-price"><span class="counter" data-target="150">0</span> QAR/hr</p>
+        </div>
+        <div class="rate-card reveal">
+          <p class="rate-area">Al Khor / Al Shakama etc.</p>
+          <p class="rate-price"><span class="counter" data-target="200">0</span> QAR/hr</p>
+        </div>
+      </div>
+
+      <div class="mobile-banner reveal">
+        <div class="car-track" aria-hidden="true">
+          <svg class="car-svg" viewBox="0 0 64 32" width="48" height="24">
+            <rect x="4" y="12" width="40" height="12" rx="3" fill="#800020"/>
+            <rect x="12" y="6" width="20" height="10" rx="2" fill="#5E0017"/>
+            <circle cx="14" cy="26" r="5" fill="#333"/>
+            <circle cx="38" cy="26" r="5" fill="#333"/>
+            <circle cx="14" cy="26" r="2" fill="#FAF6F6"/>
+            <circle cx="38" cy="26" r="2" fill="#FAF6F6"/>
+          </svg>
+        </div>
+        <p>🚘 We are mobile! (We come to you.)</p>
+      </div>
+
+      <div class="cta-block reveal">
+        <p class="cta-text">Reply or call <a href="tel:+97459978518">+974 5997 8518</a> to book your session today!</p>
+        <div class="cta-buttons">
+          <a href="tel:+97459978518" class="btn btn-primary btn-pulse">Call Now</a>
+          <a href="https://wa.me/97459978518" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEN content -->
+  <section id="sen-content" class="services-section sen-mode hidden">
+    <div class="container">
+      <h1 class="page-title anim-fade-up">Academic Support for Children with Special Needs</h1>
+      <p class="page-subtitle anim-fade-up delay-1">Specialized SEN & Inclusive Support</p>
+      <p class="page-lead anim-fade-up delay-2">Customized learning plans for ADHD, Autism & learning difficulties in:</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>English / Early Literacy</h3>
+          <p>Reading, writing and speaking — paced for each learner.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Maths</h3>
+          <p>Concrete, multi-sensory approaches to number and problem-solving.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Science</h3>
+          <p>Exploring the world at a comfortable pace.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Fine-motor skills</h3>
+          <p>Handwriting, cutting, and everyday coordination activities.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Eye & hand coordination</h3>
+          <p>Targeted exercises that support learning readiness.</p>
+        </article>
+      </div>
+
+      <h2 class="rates-title reveal">Rates per hour</h2>
+      <div class="rates-grid">
+        <div class="rate-card reveal">
+          <p class="rate-area">Al Wakra / Al Wukair / Ezdan</p>
+          <p class="rate-price"><span class="counter" data-target="150">0</span> QAR/hr</p>
+        </div>
+        <div class="rate-card reveal">
+          <p class="rate-area">Doha</p>
+          <p class="rate-price"><span class="counter" data-target="200">0</span> QAR/hr</p>
+        </div>
+        <div class="rate-card reveal">
+          <p class="rate-area">Al Khor / Al Shakama etc.</p>
+          <p class="rate-price"><span class="counter" data-target="250">0</span> QAR/hr</p>
+        </div>
+      </div>
+
+      <div class="mobile-banner reveal">
+        <div class="car-track" aria-hidden="true">
+          <svg class="car-svg" viewBox="0 0 64 32" width="48" height="24">
+            <rect x="4" y="12" width="40" height="12" rx="3" fill="#800020"/>
+            <rect x="12" y="6" width="20" height="10" rx="2" fill="#5E0017"/>
+            <circle cx="14" cy="26" r="5" fill="#333"/>
+            <circle cx="38" cy="26" r="5" fill="#333"/>
+            <circle cx="14" cy="26" r="2" fill="#FAF6F6"/>
+            <circle cx="38" cy="26" r="2" fill="#FAF6F6"/>
+          </svg>
+        </div>
+        <p>🚘 We are mobile! (We come to you.)</p>
+      </div>
+
+      <div class="cta-block reveal">
+        <p class="cta-text">Reply or call <a href="tel:+97459978518">+974 5997 8518</a> to discuss your child’s needs today!</p>
+        <div class="cta-buttons">
+          <a href="tel:+97459978518" class="btn btn-primary btn-pulse">Call Now</a>
+          <a href="https://wa.me/97459978518" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Home Tutoring Qatar. All rights reserved.</p>
+    <p class="footer-contact">
+      <a href="tel:+97459978518">+974 5997 8518</a> ·
+      <a href="https://wa.me/97459978518" target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

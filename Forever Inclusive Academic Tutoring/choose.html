@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Choose your child’s learning path – Standard or Autism-Friendly – at Forever Inclusive Academic Tutoring." />
+  <title>Choose Learning Path | Forever Inclusive Academic Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="48" height="48" />
+      <span>Forever Inclusive</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#rates">Rates</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-sm" id="nav-auth-btn">Sign Up / Log In</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm" id="nav-dash-btn" style="display:none">Dashboard</a>
+      <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn" style="display:none">Log out</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#rates">Rates</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="signup.html" id="mobile-auth">Sign Up / Log In</a>
+    <a href="dashboard.html" id="mobile-dash" style="display:none">Dashboard</a>
+    <a href="#" id="mobile-logout" style="display:none">Log out</a>
+  </div>
+</header>
+
+<main class="form-page">
+  <div class="container">
+    <div class="section-header reveal">
+      <h1>Choose Your Child’s Learning Path</h1>
+      <p>We offer two supportive approaches. Select the one that best fits your child — you can always discuss details later.</p>
+    </div>
+
+    <div class="choose-grid">
+      <article class="card choose-card reveal reveal-delay-1" data-type="standard" tabindex="0" role="button" aria-label="Select Standard Learning">
+        <div class="icon" aria-hidden="true">🎓</div>
+        <h2>Standard Learning</h2>
+        <p>Personalised academic support for children who thrive with typical classroom-style guidance. Ideal for building skills, confidence and exam readiness.</p>
+        <span class="btn btn-primary btn-sm" style="margin-top:1.25rem;pointer-events:none">Select</span>
+      </article>
+
+      <article class="card choose-card reveal reveal-delay-2" data-type="autism" tabindex="0" role="button" aria-label="Select Autism-Friendly Learning">
+        <div class="icon" aria-hidden="true">💜</div>
+        <h2>Autism-Friendly Learning</h2>
+        <p>Respectful, patient tutoring tailored for autistic learners. We adapt to communication preferences, sensory needs and individual strengths in a calm, supportive way.</p>
+        <span class="btn btn-primary btn-sm" style="margin-top:1.25rem;pointer-events:none">Select</span>
+      </article>
+    </div>
+
+    <p class="reveal" style="text-align:center;margin-top:2.5rem;font-size:0.95rem;color:#5a3a42">
+      Your choice is private and only used to prepare the best support for your child.
+    </p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="56" height="56" />
+        <strong>Forever Inclusive Academic Tutoring</strong>
+        <p>Home tutoring Y1–Y12 across Qatar. Inclusive, professional, and always mobile.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="choose.html">Book Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+97459978518">+974 5997 8518</a></li>
+          <li><a href="https://wa.me/97459978518" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Forever Inclusive Academic Tutoring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/97459978518" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

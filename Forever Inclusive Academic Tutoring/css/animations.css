@@ -1,0 +1,198 @@
+/* ============================================
+   Forever Inclusive Academic Tutoring
+   Animations - css/animations.css
+   ============================================ */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(91, 18, 36, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(91, 18, 36, 0);
+  }
+}
+
+/* Hero animations */
+.hero-text.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-text .subtitle {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.15s forwards;
+}
+
+.hero-text p {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.45s forwards;
+}
+
+.hero-logo.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Card hover glow */
+.card:hover {
+  box-shadow: 0 8px 30px rgba(91, 18, 36, 0.2), 0 0 0 1px rgba(91, 18, 36, 0.08);
+}
+
+/* Button shine */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: none;
+}
+
+.btn-primary:hover::after {
+  animation: shine 0.7s ease;
+}
+
+/* Star fill animation */
+.star {
+  transition: color 0.35s ease, transform 0.25s ease;
+}
+
+.star.animate-fill {
+  animation: scaleIn 0.4s ease forwards;
+}
+
+/* Checkmark SVG animation */
+.checkmark-circle {
+  stroke: var(--maroon);
+  stroke-width: 3;
+  fill: none;
+}
+
+.checkmark-check {
+  stroke: var(--maroon);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.modal-overlay.active .checkmark-check {
+  animation: checkmark 0.6s ease 0.2s forwards;
+}
+
+/* Page transition helper */
+.page-enter {
+  animation: fadeIn 0.4s ease;
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo.float {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-text.animate,
+  .hero-text .subtitle,
+  .hero-text p,
+  .hero-cta {
+    opacity: 1;
+    animation: none;
+  }
+
+  .btn-primary::after {
+    display: none;
+  }
+
+  .modal {
+    transition: none;
+  }
+}

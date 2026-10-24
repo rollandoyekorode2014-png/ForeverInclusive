@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a demo appointment with the Autism Support Center.">
+  <title>Book Appointment | Autism Support Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Autism Support Center Home">
+      <span class="logo-icon" aria-hidden="true">◈</span>
+      <span class="logo-text">Autism Support Center</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html" class="active">Book Appointment</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle light or dark mode" title="Toggle theme">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book an Appointment</h1>
+      <p class="section-intro">
+        Complete the form below to create a <strong>demo booking</strong>. Availability and bookings are simulated
+        and stored only in your browser. No real appointment is made with a clinic.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <!-- Booking Form -->
+      <div id="booking-form-section">
+        <form id="booking-form" class="form-card" novalidate>
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="form-group">
+              <label for="client-name">Client name <span class="required">*</span></label>
+              <input type="text" id="client-name" name="clientName" required autocomplete="name" maxlength="100">
+              <span class="error-msg" id="client-name-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="guardian-name">Parent / guardian name <span class="optional">(if applicable)</span></label>
+              <input type="text" id="guardian-name" name="guardianName" autocomplete="name" maxlength="100">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="error-msg" id="email-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Appointment details</legend>
+            <div class="form-group">
+              <label for="service">Service <span class="required">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">— Select a service —</option>
+                <option value="assessments">Autism Assessments</option>
+                <option value="speech">Speech and Language Support</option>
+                <option value="ot">Occupational Therapy</option>
+                <option value="social">Social Skills Support</option>
+                <option value="parent">Parent and Caregiver Guidance</option>
+                <option value="education">Educational Support</option>
+                <option value="online">Online Consultations</option>
+              </select>
+              <span class="error-msg" id="service-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="professional">Preferred professional <span class="optional">(optional)</span></label>
+              <select id="professional" name="professional">
+                <option value="">— No preference —</option>
+                <option value="placeholder-a">Alex (placeholder)</option>
+                <option value="placeholder-b">Jordan (placeholder)</option>
+                <option value="placeholder-c">Sam (placeholder)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="appointment-date">Preferred date <span class="required">*</span></label>
+              <input type="date" id="appointment-date" name="date" required>
+              <span class="error-msg" id="date-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="time-slot">Available time slot <span class="required">*</span></label>
+              <select id="time-slot" name="timeSlot" required disabled>
+                <option value="">— Select a date first —</option>
+              </select>
+              <span class="error-msg" id="time-error" role="alert"></span>
+              <p class="hint">Time slots are simulated demo availability for this browser.</p>
+            </div>
+            <div class="form-group">
+              <label>Appointment type <span class="required">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="appointmentType" value="online" required>
+                  Online
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="appointmentType" value="in-person">
+                  In-person
+                </label>
+              </div>
+              <span class="error-msg" id="type-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="notes">Additional notes <span class="optional">(optional)</span></label>
+              <textarea id="notes" name="notes" rows="3" maxlength="500" placeholder="Any preferences or information that might help (no detailed medical records please)."></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required>
+              I understand this is a demo booking stored only in my browser and is not a real clinic appointment. <span class="required">*</span>
+            </label>
+            <span class="error-msg" id="consent-error" role="alert"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Review booking</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Summary (hidden until review) -->
+      <div id="booking-summary" class="form-card" hidden>
+        <h2>Confirm your booking</h2>
+        <div id="summary-content"></div>
+        <div class="form-actions">
+          <button type="button" id="confirm-booking" class="btn btn-primary">Confirm appointment</button>
+          <button type="button" id="edit-booking" class="btn btn-secondary">Edit details</button>
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div id="booking-success" class="form-card success-card" hidden>
+        <h2>Demo booking created</h2>
+        <p>Your appointment has been saved in this browser only. Reference:</p>
+        <p class="booking-ref" id="booking-ref"></p>
+        <div id="success-details"></div>
+        <div class="form-actions">
+          <button type="button" id="new-booking" class="btn btn-primary">Book another</button>
+          <button type="button" id="view-my-bookings" class="btn btn-secondary">View my bookings</button>
+        </div>
+      </div>
+
+      <!-- My bookings -->
+      <div id="my-bookings-section" class="mt-3">
+        <h2>My demo bookings</h2>
+        <p class="hint">Bookings stored in this browser. You can cancel them here.</p>
+        <div id="my-bookings-list">
+          <p class="muted">No demo bookings yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Autism Support Center</h3>
+      <p class="privacy-note"><strong>Privacy:</strong> Demo bookings are stored only in localStorage. No medical records are requested or stored.</p>
+    </div>
+    <div>
+      <h4>Contact (placeholders)</h4>
+      <p>Email: rollandoyekorode2014@gmail.com</p>
+    </div>
+    <div>
+      <h4>Opening hours (example)</h4>
+      <p>Mon–Fri: 9:00 – 17:00</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Autism Support Center (Demo).</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>

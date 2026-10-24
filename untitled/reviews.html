@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read and submit reviews for the Autism Support Center demo.">
+  <title>Reviews | Autism Support Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Autism Support Center Home">
+      <span class="logo-icon" aria-hidden="true">◈</span>
+      <span class="logo-text">Autism Support Center</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle light or dark mode" title="Toggle theme">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Reviews</h1>
+      <p class="section-intro">
+        Share your experience or read demo reviews. Submitted reviews are held for approval in this browser.
+        Only approved reviews count toward the average. This is not a secure moderation system.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Rating summary -->
+      <div class="rating-summary card">
+        <div class="rating-overall">
+          <span class="avg-score" id="avg-score">—</span>
+          <div class="stars-display" id="avg-stars" aria-hidden="true"></div>
+          <p><span id="total-reviews">0</span> approved reviews</p>
+        </div>
+        <div class="rating-breakdown" id="rating-breakdown"></div>
+      </div>
+
+      <!-- Filters -->
+      <div class="reviews-controls">
+        <div class="form-group inline">
+          <label for="filter-stars">Filter by rating</label>
+          <select id="filter-stars">
+            <option value="all">All ratings</option>
+            <option value="5">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+          </select>
+        </div>
+        <div class="form-group inline">
+          <label for="sort-reviews">Sort by</label>
+          <select id="sort-reviews">
+            <option value="newest">Newest</option>
+            <option value="highest">Highest rated</option>
+          </select>
+        </div>
+        <div class="form-group inline grow">
+          <label for="search-reviews">Search reviews</label>
+          <input type="search" id="search-reviews" placeholder="Search text…">
+        </div>
+      </div>
+
+      <!-- Review list -->
+      <div id="reviews-list" class="reviews-list"></div>
+      <div class="text-center mt-2">
+        <button type="button" id="load-more-reviews" class="btn btn-secondary" hidden>Load more</button>
+      </div>
+
+      <!-- Submit form -->
+      <div class="form-card mt-3">
+        <h2>Submit a review</h2>
+        <p class="hint">Your review will be stored in this browser and marked as “pending” until you approve it in the demo moderation section below.</p>
+        <form id="review-form" novalidate>
+          <div class="form-group">
+            <label for="review-name">Display name <span class="required">*</span></label>
+            <input type="text" id="review-name" required maxlength="50">
+            <span class="error-msg" id="review-name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label>Star rating <span class="required">*</span></label>
+            <div class="star-rating" id="star-rating" role="group" aria-label="Star rating">
+              <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+              <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+              <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+              <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+              <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+            </div>
+            <input type="hidden" id="review-rating" name="rating" value="">
+            <span class="error-msg" id="review-rating-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="review-service">Service category <span class="optional">(optional)</span></label>
+            <select id="review-service">
+              <option value="">— None —</option>
+              <option value="assessments">Autism Assessments</option>
+              <option value="speech">Speech and Language</option>
+              <option value="ot">Occupational Therapy</option>
+              <option value="social">Social Skills</option>
+              <option value="parent">Parent/Caregiver Guidance</option>
+              <option value="education">Educational Support</option>
+              <option value="online">Online Consultations</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="review-text">Your review <span class="required">*</span></label>
+            <textarea id="review-text" required rows="4" maxlength="800" placeholder="Share your experience in a respectful way."></textarea>
+            <span class="error-msg" id="review-text-error" role="alert"></span>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit review</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Demo moderation -->
+      <div class="form-card mt-3">
+        <h2>Demo moderation (this browser only)</h2>
+        <p class="hint">Pending reviews appear here. Approve or reject them to simulate moderation. In production this would be server-side and restricted to staff.</p>
+        <div id="pending-reviews"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Autism Support Center</h3>
+      <p class="privacy-note"><strong>Privacy:</strong> Reviews are stored in localStorage only. Browser storage is not secure moderation.</p>
+    </div>
+    <div>
+      <h4>Contact (placeholders)</h4>
+      <p>Email: info@example-autism-support.org</p>
+    </div>
+    <div>
+      <h4>Opening hours (example)</h4>
+      <p>Mon–Fri: 9:00 – 17:00</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Autism Support Center (Demo).</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>

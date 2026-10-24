@@ -1,0 +1,200 @@
+<!-- ========== signup.html ========== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Home Tutoring Qatar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+<div class="mobile-cta-bar" aria-label="Quick contact">
+  <a href="tel:+97459978518" class="cta-call">Call</a>
+  <a href="https://wa.me/97459978518" class="cta-wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Home Tutoring Qatar">
+      <svg class="logo-svg" viewBox="0 0 64 80" width="40" height="50" aria-hidden="true">
+        <defs>
+          <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#800020"/>
+            <stop offset="100%" stop-color="#5E0017"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#ribbonGrad)" d="M20 8 L44 8 Q52 8 52 16 L52 28 Q52 36 44 36 L36 36 L36 44 Q36 52 28 52 L20 52 Q12 52 12 44 L12 28 Q12 20 20 20 Z"/>
+        <path fill="#FAF6F6" d="M24 18 h8 v6 h-8z M32 28 h6 v6 h-6z M18 32 h6 v6 h-6z"/>
+        <circle cx="28" cy="22" r="2.5" fill="#FAF6F6"/>
+        <circle cx="38" cy="34" r="2.5" fill="#FAF6F6"/>
+      </svg>
+      <span class="logo-text">Home Tutoring<br><small>Qatar</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="signup.html" class="nav-link active">Sign Up</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="signup-main">
+  <div class="container narrow">
+    <div class="auth-toggle">
+      <button type="button" id="btn-signup" class="auth-tab active" aria-selected="true">Create Account</button>
+      <button type="button" id="btn-login" class="auth-tab" aria-selected="false">Log In</button>
+    </div>
+
+    <!-- Sign-up form -->
+    <form id="signup-form" class="auth-form" novalidate>
+      <h1 class="form-title">Create your account</h1>
+      <p class="form-note">Your details are stored only on this device.</p>
+
+      <div class="form-group">
+        <label for="parent-name">Parent / Guardian full name</label>
+        <input type="text" id="parent-name" name="parentName" required autocomplete="name" minlength="2">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+974 5XXX XXXX" autocomplete="tel">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="child-name">Child’s name</label>
+        <input type="text" id="child-name" name="childName" required minlength="2">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="year-group">Year group</label>
+          <select id="year-group" name="yearGroup" required>
+            <option value="">Select…</option>
+            <option value="Y1">Y1</option><option value="Y2">Y2</option>
+            <option value="Y3">Y3</option><option value="Y4">Y4</option>
+            <option value="Y5">Y5</option><option value="Y6">Y6</option>
+            <option value="Y7">Y7</option><option value="Y8">Y8</option>
+            <option value="Y9">Y9</option><option value="Y10">Y10</option>
+            <option value="Y11">Y11</option><option value="Y12">Y12</option>
+          </select>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="curriculum">Curriculum</label>
+          <select id="curriculum" name="curriculum" required>
+            <option value="">Select…</option>
+            <option value="Cambridge">Cambridge</option>
+            <option value="CBCS">CBCS</option>
+            <option value="American">American</option>
+          </select>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="area">Area</label>
+        <select id="area" name="area" required>
+          <option value="">Select…</option>
+          <option value="Al Wakra">Al Wakra</option>
+          <option value="Al Wukair">Al Wukair</option>
+          <option value="Ezdan">Ezdan</option>
+          <option value="Doha">Doha</option>
+          <option value="Al Khor">Al Khor</option>
+          <option value="Al Shakama">Al Shakama</option>
+          <option value="Other">Other</option>
+        </select>
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="track">Chosen track</label>
+        <select id="track" name="track" required>
+          <option value="standard">Standard Learner</option>
+          <option value="sen">SEN / Special Needs</option>
+        </select>
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <!-- SEN-only fields -->
+      <div id="sen-fields" class="sen-fields hidden">
+        <div class="form-group">
+          <label for="need-type">Type of need (optional)</label>
+          <select id="need-type" name="needType">
+            <option value="">Prefer not to say</option>
+            <option value="ADHD">ADHD</option>
+            <option value="Autism">Autism</option>
+            <option value="Learning difficulties">Learning difficulties</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Any information that helps us support your child…"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-pulse">Create Account</button>
+    </form>
+
+    <!-- Login form -->
+    <form id="login-form" class="auth-form hidden" novalidate>
+      <h1 class="form-title">Welcome back</h1>
+      <p class="form-note">Your details are stored only on this device.</p>
+
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="loginEmail" required autocomplete="email">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="loginPassword" required autocomplete="current-password">
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+
+    <!-- Success message -->
+    <div id="success-msg" class="success-panel hidden" role="status">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2>Account created!</h2>
+      <p>Redirecting you to your services…</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Home Tutoring Qatar. All rights reserved.</p>
+    <p class="footer-contact">
+      <a href="tel:+97459978518">+974 5997 8518</a> ·
+      <a href="https://wa.me/97459978518" target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

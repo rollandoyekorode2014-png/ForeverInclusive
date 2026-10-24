@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tell us about your child so we can prepare the best home tutoring support." />
+  <title>Child Information | Forever Inclusive Academic Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="src/assets/2.png" alt="Forever Inclusive Academic Tutoring logo" width="48" height="48" />
+      <span>Forever Inclusive</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#rates">Rates</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-sm" id="nav-auth-btn">Sign Up / Log In</a>
+      <a href="dashboard.html" class="btn btn-outline btn-sm" id="nav-dash-btn" style="display:none">Dashboard</a>
+      <a href="#" class="btn btn-outline btn-sm" id="nav-logout-btn" style="display:none">Log out</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#rates">Rates</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="signup.html" id="mobile-auth">Sign Up / Log In</a>
+    <a href="dashboard.html" id="mobile-dash" style="display:none">Dashboard</a>
+    <a href="#" id="mobile-logout" style="display:none">Log out</a>
+  </div>
+</header>
+
+<main class="form-page">
+  <div class="container">
+    <div class="form-card wide page-enter">
+      <h1 style="text-align:center;margin-bottom:0.35rem">About Your Child</h1>
+      <p style="text-align:center;margin-bottom:1.5rem">
+        Learning path: <strong id="child-type-badge">Standard Learning</strong>
+      </p>
+
+      <form id="child-form" novalidate>
+        <div class="form-group">
+          <label for="child-name">Child’s name *</label>
+          <input type="text" id="child-name" name="name" required placeholder="First name is fine" />
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="form-group">
+            <label for="child-age">Age *</label>
+            <select id="child-age" name="age" required>
+              <option value="">Select</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="child-year">School year *</label>
+            <select id="child-year" name="year" required>
+              <option value="">Select</option>
+              <option value="Y1">Y1</option>
+              <option value="Y2">Y2</option>
+              <option value="Y3">Y3</option>
+              <option value="Y4">Y4</option>
+              <option value="Y5">Y5</option>
+              <option value="Y6">Y6</option>
+              <option value="Y7">Y7</option>
+              <option value="Y8">Y8</option>
+              <option value="Y9">Y9</option>
+              <option value="Y10">Y10</option>
+              <option value="Y11">Y11</option>
+              <option value="Y12">Y12</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="child-curriculum">Curriculum *</label>
+          <select id="child-curriculum" name="curriculum" required>
+            <option value="">Select curriculum</option>
+            <option value="Cambridge">Cambridge</option>
+            <option value="CBCS">CBCS</option>
+            <option value="American">American</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Subjects needed *</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="subjects" value="English / Early Literacy" /> English / Early Literacy</label>
+            <label><input type="checkbox" name="subjects" value="Maths" /> Maths</label>
+            <label><input type="checkbox" name="subjects" value="Science" /> Science</label>
+            <label><input type="checkbox" name="subjects" value="Exam Prep" /> Exam Prep</label>
+            <label><input type="checkbox" name="subjects" value="IGCSE" /> IGCSE</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="child-area">Where do you live? *</label>
+          <select id="child-area" name="area" required>
+            <option value="">Select area</option>
+            <optgroup label="120 QAR/hr">
+              <option value="Al Wakra">Al Wakra</option>
+              <option value="Al Wukair">Al Wukair</option>
+              <option value="Ezdan">Ezdan</option>
+            </optgroup>
+            <optgroup label="150 QAR/hr – Doha areas">
+              <option value="West Bay">West Bay</option>
+              <option value="The Pearl">The Pearl</option>
+              <option value="Lusail">Lusail</option>
+              <option value="Al Sadd">Al Sadd</option>
+              <option value="Musheireb">Musheireb</option>
+              <option value="Al Waab">Al Waab</option>
+              <option value="Old Airport">Old Airport</option>
+              <option value="Bin Mahmoud">Bin Mahmoud</option>
+              <option value="Al Hilal">Al Hilal</option>
+              <option value="Doha other">Doha (other)</option>
+            </optgroup>
+            <optgroup label="200 QAR/hr">
+              <option value="Al Khor">Al Khor</option>
+              <option value="Al Shamal">Al Shamal</option>
+              <option value="Al Ruwais">Al Ruwais</option>
+              <option value="Other / Outside">Other / Outside</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="price-display" aria-live="polite">
+          Rate for your area: <span id="price-rate">—</span> QAR/hr
+        </div>
+
+        <div class="form-group">
+          <label for="child-address">Full address or landmark</label>
+          <input type="text" id="child-address" name="address" placeholder="Building, street, or nearby landmark" />
+        </div>
+
+        <div class="form-group">
+          <label for="child-times">Preferred days / times</label>
+          <textarea id="child-times" name="times" rows="2" placeholder="e.g. Weekday afternoons, Saturday mornings"></textarea>
+        </div>
+
+        <!-- Autism-friendly optional fields – shown only when childType = autism -->
+        <div id="autism-fields" class="autism-fields" style="display:none">
+          <h4>Support preferences (optional)</h4>
+          <p class="note">These details help us prepare a calm, respectful session. Share only what feels comfortable — everything is private.</p>
+
+          <div class="form-group">
+            <label for="child-communication">Communication style</label>
+            <input type="text" id="child-communication" name="communication" placeholder="e.g. prefers visual supports, short sentences, AAC" />
+          </div>
+          <div class="form-group">
+            <label for="child-sensory">Sensory sensitivities</label>
+            <input type="text" id="child-sensory" name="sensory" placeholder="e.g. sensitive to noise, prefers soft lighting" />
+          </div>
+          <div class="form-group">
+            <label for="child-interests">Interests or known triggers</label>
+            <input type="text" id="child-interests" name="interests" placeholder="Favourite topics, things to avoid" />
+          </div>
+          <div class="form-group">
+            <label for="child-notes">Any current support or diagnosis notes</label>
+            <textarea id="child-notes" name="notes" rows="2" placeholder="Optional – whatever helps us support your child best"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit & Continue</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<!-- Success Modal -->
+<div id="success-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <svg class="checkmark" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="checkmark-circle" cx="26" cy="26" r="24" />
+      <path class="checkmark-check" d="M14 27l8 8 16-16" />
+    </svg>
+    <h3 id="modal-title">Booking details saved!</h3>
+    <p>We’ve saved your child’s information. Confirm on WhatsApp to schedule your first session, or view your dashboard.</p>
+    <div class="modal-actions">
+      <a id="wa-confirm-btn" href="https://wa.me/97459978518" class="btn btn-whatsapp" target="_blank" rel="noopener">Confirm on WhatsApp</a>
+      <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
+      <button type="button" class="btn btn-outline modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:none;padding-top:0">
+      <p>&copy; 2026 Forever Inclusive Academic Tutoring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/97459978518" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Autism Support Center – demo contact form.">
+  <title>Contact | Autism Support Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Autism Support Center Home">
+      <span class="logo-icon" aria-hidden="true">◈</span>
+      <span class="logo-text">Autism Support Center</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle light or dark mode" title="Toggle theme">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="section-intro">
+        Send a message using the form below. Because this is a frontend demo, messages are <strong>not actually sent</strong>.
+        You will see a simulated success message only.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <div class="form-card">
+        <h2>Send a message (demo)</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Name <span class="required">*</span></label>
+            <input type="text" id="contact-name" required maxlength="100" autocomplete="name">
+            <span class="error-msg" id="contact-name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email <span class="required">*</span></label>
+            <input type="email" id="contact-email" required autocomplete="email">
+            <span class="error-msg" id="contact-email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject <span class="required">*</span></label>
+            <input type="text" id="contact-subject" required maxlength="150">
+            <span class="error-msg" id="contact-subject-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required">*</span></label>
+            <textarea id="contact-message" required rows="5" maxlength="1000"></textarea>
+            <span class="error-msg" id="contact-message-error" role="alert"></span>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send message (demo)</button>
+          </div>
+        </form>
+        <div id="contact-success" class="success-message" hidden>
+          <p><strong>Demo only:</strong> Your message was not sent to any server. In a real site it would be emailed or stored securely.</p>
+        </div>
+      </div>
+
+      <aside class="contact-info card">
+        <h2>Contact details (placeholders)</h2>
+        <p><strong>Email:</strong> info@example-autism-support.org</p>
+        <p><strong>Phone:</strong> +1 (555) 000-0000</p>
+        <p><strong>Address:</strong> 123 Support Lane, Example City, EX 00000</p>
+        <h3>Opening hours (example)</h3>
+        <p>Monday – Friday: 9:00 – 17:00</p>
+        <p>Saturday: 10:00 – 14:00</p>
+        <p>Sunday: Closed</p>
+        <p class="hint">These are placeholder details for the demo website only.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container narrow">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list" data-faq>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Will someone reply to my message?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>No. The contact form is simulated. Nothing is emailed or stored on a server. A production site would use a secure form backend.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I book an appointment from the contact page?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Please use the dedicated <a href="booking.html">Book Appointment</a> page for demo bookings.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is my information private?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>We only collect the fields needed for this demo. Contact form data is not stored. Bookings and reviews stay in your browser’s localStorage only.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Autism Support Center</h3>
+      <p class="privacy-note"><strong>Privacy:</strong> Contact form is simulated. No data is sent to a server.</p>
+    </div>
+    <div>
+      <h4>Contact (placeholders)</h4>
+      <p>Email: info@example-autism-support.org</p>
+    </div>
+    <div>
+      <h4>Opening hours (example)</h4>
+      <p>Mon–Fri: 9:00 – 17:00</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Autism Support Center (Demo).</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
